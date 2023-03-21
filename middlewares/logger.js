@@ -17,7 +17,7 @@ const logEvents = async (message, logFileName) =>
         }
         await rfs.createStream(() => {
             fsPromises.appendFile(path.join(__dirname, '..', 'logs',
-            logFileName), logItem)
+                logFileName), logItem);
         },{
             interval: '1d', // rotate daily
         });
